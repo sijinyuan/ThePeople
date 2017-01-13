@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v13:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:cardview-v7:25.0.0'
+
+    //***********************************加载图片******************************
+    //glide加载图片
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //glide引用库
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    //glide与okhttp的优化
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+
+
+    //***********************************网络连接******************************
+    //网络连接OKhttp
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    //拦截日志
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //gson解析
+    compile 'com.google.code.gson:gson:2.8.0'
+    //okhttp封装
+    compile 'com.zhy:okhttputils:2.0.0'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //***********************************万能适配器***********************************
+    //ListView万能适配器
+    compile 'com.zhy:base-adapter:3.0.3'
+    //Recyclerview万能适配器
+    compile 'com.zhy:base-rvadapter:3.0.3'
+
+    //***********************************工具***********************************
+    //沉浸式状态栏
+    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    //recyclerview
+    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
+    //viewpager无线轮播工具类
+    compile 'com.youth.banner:banner:1.4.2'
+    //RX
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+}
